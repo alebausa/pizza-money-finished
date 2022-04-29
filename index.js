@@ -11,13 +11,15 @@ const table = document.getElementById('calculator');
 
 function createNewRow() {
   const name = prompt("What's your friend's name?");
-  const newRow = document.createElement('tr');
-  newRow.id = id;
-  newRow.innerHTML = `<td>${name}</td>
-          <td><input class="quantity" type="number" value="0"/></td>
-          <td><button onclick="deleteRow(${id})">❌</button></td>`;
-  table.appendChild(newRow);
-  id = id + 1;
+  if (name) {
+    const newRow = document.createElement('tr');
+    newRow.id = id;
+    newRow.innerHTML = `<td>${name}</td>
+            <td><input class="quantity" type="number" value="0"/></td>
+            <td><button onclick="deleteRow(${id})">❌</button></td>`;
+    table.appendChild(newRow);
+    id = id + 1;
+  }
 }
 
 function deleteRow(passId){
