@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"/>
+  <title>Pizza money</title>
+</head>
+<body>
+  <main>
+    <div>
+      <h3>My friends owe me pizza money 🍕🍟</h3>
+      <table>
+        <tbody id="calculator">
+          <tr id="headingRow">
+            <th>Name</th>
+            <th>How much</th>
+            <th>Delete</th>
+          </tr>
+          <tr id="1">
+            <td>Pepe</td>
+            <td><input class="quantity" type="number" value="30"/></td>
+            <td><button onclick="deleteRow(1)">❌</button></td>
+          </tr>
+      </tbody>
+      </table>
+      
+    </div>
+    <p>Total: <span id="total">0</span>€ <button class="total-btn" onclick="getTotal()">Calculate total</button></p> 
+    <button onclick="createNewRow()">+ Add another cheap friend</button>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
